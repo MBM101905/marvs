@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camera Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #111;
+      padding: 20px 40px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .banner {
+      background: url('img/4f5f34d7309e763903f3d8115cf55fd4.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 28px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 40px 40px;
+    }
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .product-info p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .price {
+      color: #e60023;
+      font-weight: bold;
+    }
+    .footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .toggle-video-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+.toggle-video-btn:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pit.k_</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    Discover Your Perfect Shot
+  </div>
+
+  <h2 class="section-title">Featured Cameras</h2>
+
+  <div class="product-grid">
+    <div class="product">
+    <img src="img/canon.png" alt="Canon EOS R6">
+    <div class="product-info">
+    <h3>Canon EOS R6</h3>
+    <p>High-performance mirrorless camera with 4K video and 20fps shooting.</p>
+    <p class="price">$2,499</p>
+    <button class="toggle-video-btn">Watch Video</button>
+    </div>
+    <div class="product-video" style="display: none;">
+    <iframe width="100%" height="200"
+      src="vid/Canon EOS R6 Mark II __ Cinematic Norway.mp4"
+      title="Canon EOS R6 Sample Video"
+      frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
+    </div>
+
+    <div class="product">
+  <img src="img/Screenshot 2025-05-27 103916.png" alt="Canon EOS R6">
+    <div class="product-info">
+    <h3>Nikon Z6 II</h3>
+    <p>High-performance mirrorless camera with 4K video and 20fps shooting.</p>
+    <p class="price">$1,999</p>
+    <button class="toggle-video-btn">Watch Video</button>
+    </div>
+    <div class="product-video" style="display: none;">
+    <iframe width="100%" height="200"
+      src="vid/Nikon Z6II Z6 Mark II 4K Video Test.mp4"
+      title="Canon EOS R6 Sample Video"
+      frameborder="0" allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+
+
+    <div class="product">
+  <img src="img/sony.png" alt="Canon EOS R6">
+    <div class="product-info">
+    <h3>Sony Alpha A7 III</h3>
+    <p>High-performance mirrorless camera with 4K video and 20fps shooting.</p>
+    <p class="price">$1,798</p>
+    <button class="toggle-video-btn">Watch Video</button>
+    </div>
+    <div class="product-video" style="display: none;">
+    <iframe width="100%" height="200"
+      src="vid/Sony A7 III Sample Footage.mp4"
+      title="Canon EOS R6 Sample Video"
+      frameborder="0" allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Pit.k_. All rights reserved.
+  </footer>
+
+</body>
+<script>
+  document.querySelectorAll('.toggle-video-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const videoDiv = button.parentElement.nextElementSibling;
+      if (videoDiv.style.display === "none") {
+        videoDiv.style.display = "block";
+        button.textContent = "Hide Video";
+      } else {
+        videoDiv.style.display = "none";
+        button.textContent = "Watch Video";
+      }
+    });
+  });
+</script>
+</html>

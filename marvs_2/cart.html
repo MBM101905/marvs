@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Camera Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #111;
+      padding: 20px 40px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .cart-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f8f8f8;
+    }
+    .cart-image {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .total {
+      text-align: right;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .checkout-btn {
+      display: block;
+      text-align: right;
+      margin-top: 30px;
+    }
+    .btn {
+      padding: 12px 24px;
+      background-color: #e60023;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #b8001a;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pit.k_</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="cart-container">
+    <h2>Your Shopping Cart</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="img/sony.png" class="cart-image" alt="Sony A7 III"></td>
+          <td>Sony Alpha A7 III</td>
+          <td>$1,798</td>
+          <td>1</td>
+          <td>$1,798</td>
+        </tr>
+        <tr>
+          <td><img src="img/Nikon_Z_50_0.png" class="cart-image" alt="Nikon Z6 II"></td>
+          <td>Nikon Z6 II</td>
+          <td>$1,999</td>
+          <td>1</td>
+          <td>$1,999</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">Total: $3,797</div>
+
+    <div class="checkout-btn">
+      <a href="checkout.html"><button class="btn">Proceed to Checkout</button></a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Pit.k_. All rights reserved.
+  </footer>
+
+</body>
+</html>
+                                                                                                
